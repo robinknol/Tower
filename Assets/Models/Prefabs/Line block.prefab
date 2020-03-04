@@ -382,9 +382,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8731683351667341645}
   - component: {fileID: 8731683351667341646}
+  - component: {fileID: 6287794498795063368}
+  - component: {fileID: 6010734808727339953}
   m_Layer: 0
   m_Name: Line block
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8731683351667341647}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8731683350340157673}
@@ -421,5 +423,43 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 104
   m_CollisionDetection: 0
+--- !u!114 &6287794498795063368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731683351667341647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562d0c54dfb91be4bba8d9fb46fc05c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 0
+  Ground: 0
+--- !u!114 &6010734808727339953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731683351667341647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf447993f7c07a49850b3ac7a828fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LRightBlock: {fileID: 7194491849442555300, guid: 560196a1096a4ce4fb12a8247b35bb5e,
+    type: 3}
+  LLeftBlock: {fileID: 8407281592009764503, guid: 68c133d669a22b249a37f631fe789a3b,
+    type: 3}
+  LineBlock: {fileID: 8731683351667341647}
+  OBlock: {fileID: 8680660263689958279, guid: 4340dec9ba6ece440add8b44e97c27be, type: 3}
+  TBlock: {fileID: 5637168480273423372, guid: 850164b2e092be04288a25b88439fa2d, type: 3}
+  ZRightBlock: {fileID: 5943429608966080150, guid: 11cda8fa8e48e7f4dab0df321c4d7e75,
+    type: 3}
+  zLeftBlock: {fileID: 3995318626567083185, guid: 1fdc834bd80c4aa4cbcbcc2865926a29,
+    type: 3}
+  Ground: 0
