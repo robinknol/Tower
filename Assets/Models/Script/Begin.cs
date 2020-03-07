@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSpawn : MonoBehaviour
+public class Begin : MonoBehaviour
 {
-    
     [SerializeField] GameObject LRightBlock;
     [SerializeField] GameObject LLeftBlock;
     [SerializeField] GameObject LineBlock;
@@ -12,23 +11,8 @@ public class RandomSpawn : MonoBehaviour
     [SerializeField] GameObject TBlock;
     [SerializeField] GameObject ZRightBlock;
     [SerializeField] GameObject zLeftBlock;
-    [SerializeField] bool Ground;
 
-    void Update()
-    {
-        if(Ground == true)
-        {
-            BlockRadomizer();
-            GetComponent<RandomSpawn>().enabled = false;
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Ground = true;
-    }
-
-    void BlockRadomizer()
+    void Start()
     {
         int RandomBlock = Random.Range(0, 6);
         if (RandomBlock == 0)

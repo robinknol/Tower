@@ -5,9 +5,9 @@ using UnityEngine.UIElements;
 
 public class Textsomething : MonoBehaviour
 {
-    [SerializeField] Canvas UI;
     [SerializeField] GameObject score;
     [SerializeField] int height;
+    [SerializeField] GameObject[] all;
     void Start()
     {
         score.GetComponent<TextMesh>().text = "Score " + height;
@@ -15,6 +15,8 @@ public class Textsomething : MonoBehaviour
 
     void Update()
     {
-        
+        UnityEngine.Ray ray = Camera.main.ScreenPointToRay(new Vector3(0, height, 0));
+
+        Debug.DrawRay(start: ray.origin, dir: ray.direction * 100, Color.green);
     }
 }

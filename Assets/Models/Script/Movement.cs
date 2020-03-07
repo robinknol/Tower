@@ -5,7 +5,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] int position;
-    // [SerializeField] int rotation;
     [SerializeField] bool Ground;
     void Update()
     {
@@ -21,7 +20,12 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.Rotate(90,0,0);
+            transform.Rotate(90, 0, 0);
+        }
+
+        else if(Input.GetKeyDown(KeyCode.S))
+        {
+            transform.Rotate(-90, 0, 0);
         }
 
         if (Ground == true)
